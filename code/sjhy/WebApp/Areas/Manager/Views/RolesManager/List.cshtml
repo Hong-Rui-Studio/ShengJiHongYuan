@@ -1,4 +1,4 @@
-﻿@model List<Entity.Dtos.RolesDto>
+﻿@model IPagedList<Entity.ViewModels.Roles.RolesListViewModel>
 @{
     ViewBag.Title = "身份管理界面";
 }
@@ -10,11 +10,11 @@
     <div class="panel-body">
         <div class="row">
             <div class="col-md-5 col-md-offset-1">
-                <form action="" method="get">
+                <form asp-action="List" asp-controller="RolesManager" asp-area="Manager" method="get">
                      <div class="input-group">
-                          <input class="form-control" type="text">
+                          <input class="form-control" name="search" type="text" value="@ViewBag.Search">
                           <span class="input-group-btn">
-                              <button class="btn btn-primary" type="button">
+                              <button type="submit" class="btn btn-primary" type="button">
                                   <i class="fa fa-search"></i> 搜索</button>
                                   <!-- font-awesome  -->
                           </span>
@@ -22,7 +22,7 @@
                 </form>
             </div>
             <div class="col-md-3">
-                <a href="#" class="btn btn-success">
+                <a asp-action="Add" asp-controller="RolesManager" asp-area="Manager" class="btn btn-success">
                     <i class="fa fa-plus"></i> 新增身份信息
                 </a>
 
@@ -36,7 +36,7 @@
                         <tr>
                             <th>序号</th>
                             <th>身份名称</th>
-                            <th>修改事件</th>
+                            <th>修改时间</th>
                             <th>操作</th>
                         </tr>
                     </thead>
@@ -44,14 +44,14 @@
                         @foreach (var item in Model)
                         {
                             <tr>
-                                <td>@item.Id</td>
-                                <td>@item.Title</td>
+                                <td>@item.RolesId</td>
+                                <td>@item.RolesTitle</td>
                                 <td>@item.UpdateTime</td>
                                 <td>
-                                    <a href="#" class="btn btn-warning">
+                                    <a asp-action="Edit" asp-controller="RolesManager" asp-area="Manager" asp-route-id="@item.RolesId" class="btn btn-warning">
                                          <i class="fa fa-pencil"></i>   修改
                                     </a>
-                                    <a href="#" class="btn btn-danger">
+                                    <a href="javascript:void(0);" onclick="DeleteInfo(@item.RolesId,'../../../Manager/RolesManager/Delete')" class="btn btn-danger">
                                         <i class="fa fa-trash"></i>   删除
                                      </a>
                                 </td>
@@ -67,15 +67,19 @@
         </div>
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                分页
+              @Html.PagedListPager(Model,page => Url.Action("List","RolesManager",new{page,search=ViewBag.Search},"https","localhost:7252/Manager"))
             </div>
         </div>
 
 
 
     </div>
-
 </div>
+
+@section Scripts{
+
+    <script src="~/assets/scripts/DeleteData.js"></script>
+}
 
 
 

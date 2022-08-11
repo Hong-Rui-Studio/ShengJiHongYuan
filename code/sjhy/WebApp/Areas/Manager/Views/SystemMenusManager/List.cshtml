@@ -1,0 +1,96 @@
+﻿@model IPagedList<Entity.ViewModels.SystemMenus.SystemMenusListViewModel>
+@{
+    ViewBag.Title = "系统菜单管理界面";
+}
+
+<div class="panel panel-headline">
+    <div class="panel-heading">
+        <h3 class="panel-title">系统菜单管理界面</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-5 col-md-offset-1">
+                <form asp-action="List" asp-controller="SystemMenusManager" asp-area="Manager" method="get">
+                     <div class="input-group">
+                          <input class="form-control" name="search" type="text" value="@ViewBag.Search">
+                          <span class="input-group-btn">
+                              <button type="submit" class="btn btn-primary" type="button">
+                                  <i class="fa fa-search"></i> 搜索</button>
+                                  <!-- font-awesome  -->
+                          </span>
+                     </div>
+                </form>
+            </div>
+            <div class="col-md-3">
+                <a asp-action="Add" asp-controller="SystemMenusManager" asp-area="Manager" class="btn btn-success">
+                    <i class="fa fa-plus"></i> 新增系统菜单信息
+                </a>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>系统菜单名称</th>
+                            <th>系统菜单链接</th>
+                            <th>系统菜单图标</th>
+                            <th>父级菜单名称</th>
+                            <th>修改时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Title</td>
+                                <td>@item.Link</td>
+                                <td>
+                                    @if (item.Icons != null)
+                                    {
+                                        <i class="fa @item.Icons"></i>
+                                    }
+                                </td>
+                                <td>@item.ParentTitle</td>
+                                <td>@item.UpdateTime</td>
+                                <td>
+                                    <a asp-action="Edit" asp-controller="SystemMenusManager" asp-area="Manager" asp-route-id="@item.Id" class="btn btn-warning">
+                                         <i class="fa fa-pencil"></i>   修改
+                                    </a>
+                                    <a href="javascript:void(0);" onclick="DeleteInfo(@item.Id,'../../../Manager/SystemMenusManager/Delete')" class="btn btn-danger">
+                                        <i class="fa fa-trash"></i>   删除
+                                     </a>
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              @Html.PagedListPager(Model,page => Url.Action("List","SystemMenusManager",new{page,search=ViewBag.Search},"https","localhost:7252/Manager"))
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+@section Scripts{
+
+    <script src="~/assets/scripts/DeleteData.js"></script>
+}
+
+
+

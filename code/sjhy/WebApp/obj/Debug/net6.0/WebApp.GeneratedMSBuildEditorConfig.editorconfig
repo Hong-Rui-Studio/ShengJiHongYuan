@@ -15,12 +15,40 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Project\重构(GitHub)\圣际宏原\code\sjhy\WebApp
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/Project/重构(GitHub)/圣际宏原/code/sjhy/WebApp/Areas/Manager/Views/AdminsManager/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xBZG1pbnNNYW5hZ2VyXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/重构(GitHub)/圣际宏原/code/sjhy/WebApp/Areas/Manager/Views/AdminsManager/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xBZG1pbnNNYW5hZ2VyXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/重构(GitHub)/圣际宏原/code/sjhy/WebApp/Areas/Manager/Views/AdminsManager/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xBZG1pbnNNYW5hZ2VyXExpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/重构(GitHub)/圣际宏原/code/sjhy/WebApp/Areas/Manager/Views/RolesManager/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xSb2xlc01hbmFnZXJcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/重构(GitHub)/圣际宏原/code/sjhy/WebApp/Areas/Manager/Views/RolesManager/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xSb2xlc01hbmFnZXJcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Project/重构(GitHub)/圣际宏原/code/sjhy/WebApp/Areas/Manager/Views/RolesManager/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xSb2xlc01hbmFnZXJcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Project/重构(GitHub)/圣际宏原/code/sjhy/WebApp/Areas/Manager/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX0xheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/重构(GitHub)/圣际宏原/code/sjhy/WebApp/Areas/Manager/Views/SystemMenusManager/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTeXN0ZW1NZW51c01hbmFnZXJcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Project/重构(GitHub)/圣际宏原/code/sjhy/WebApp/Areas/Manager/Views/SystemMenusManager/List.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTeXN0ZW1NZW51c01hbmFnZXJcTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Project/重构(GitHub)/圣际宏原/code/sjhy/WebApp/Areas/Manager/Views/_ViewImports.cshtml]

@@ -1,0 +1,101 @@
+﻿@model IPagedList<Entity.ViewModels.Admins.AdminsListViewModel>
+@{
+    ViewBag.Title = "管理员管理界面";
+}
+
+<div class="panel panel-headline">
+    <div class="panel-heading">
+        <h3 class="panel-title">管理员管理界面</h3>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-5 col-md-offset-1">
+                <form asp-action="List" asp-controller="AdminsManager" asp-area="Manager" method="get">
+                     <div class="input-group">
+                          <input class="form-control" name="search" type="text" value="@ViewBag.Search">
+                          <span class="input-group-btn">
+                              <button type="submit" class="btn btn-primary" type="button">
+                                  <i class="fa fa-search"></i> 搜索</button>
+                                  <!-- font-awesome  -->
+                          </span>
+                     </div>
+                </form>
+            </div>
+            <div class="col-md-3">
+                <a asp-action="Add" asp-controller="AdminsManager" asp-area="Manager" class="btn btn-success">
+                    <i class="fa fa-plus"></i> 新增管理员信息
+                </a>
+
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>姓名</th>
+                            <th>出生日期</th>
+                            <th>年龄</th>
+                            <th>性别</th>
+                            <th>邮件地址</th>
+                            <th>联系电话</th>
+                            <th>头像</th>
+                            <th>身份名称</th>
+                            <th>修改时间</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Name</td>
+                                <td>@item.BornDate</td>
+                                <td>@item.Age</td>
+                                <td>@item.Gender</td>
+                                <td>@item.Email</td>
+                                <td>@item.Tel</td>
+                                <td>
+                                    <img src="~/upload/admins/@item.Photo" />
+                                </td>
+                                <td>@item.RolesTitle</td>
+                                <td>@item.UpdateTime</td>
+                                <td>
+                                    <a asp-action="Edit" asp-controller="AdminsManager" asp-area="Manager" asp-route-id="@item.Id" class="btn btn-warning">
+                                         <i class="fa fa-pencil"></i>   修改
+                                    </a>
+                                    <a href="javascript:void(0);" onclick="DeleteInfo(@item.Id,'../../../Manager/AdminsManager/Delete')" class="btn btn-danger">
+                                        <i class="fa fa-trash"></i>   删除
+                                     </a>
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              @Html.PagedListPager(Model,page => Url.Action("List","AdminsManager",new{page,search=ViewBag.Search},"https","localhost:7252/Manager"))
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+@section Scripts{
+
+    <script src="~/assets/scripts/DeleteData.js"></script>
+}
+
+
+

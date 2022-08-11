@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vr/DlWDfU7V729Lk16Gmapa8g9cxx2aO0b7YaPpEjtM=",
+  "Hash": "I6t9fJNpN8cIsXl4HqN6bqLGg1oENU9MG4KMA5rLV/g=",
   "Source": "WebApp",
   "BasePath": "_content/WebApp",
   "Mode": "Default",
@@ -321,6 +321,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\user-medium.png"
+    },
+    {
+      "Identity": "D:\\Project\\重构(GitHub)\\圣际宏原\\code\\sjhy\\WebApp\\wwwroot\\assets\\scripts\\DeleteData.js",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\重构(GitHub)\\圣际宏原\\code\\sjhy\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "assets/scripts/DeleteData.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\scripts\\DeleteData.js"
     },
     {
       "Identity": "D:\\Project\\重构(GitHub)\\圣际宏原\\code\\sjhy\\WebApp\\wwwroot\\assets\\scripts\\klorofil-common.js",
@@ -1188,6 +1205,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\vendor\\toastr\\toastr.min.js"
+    },
+    {
+      "Identity": "D:\\Project\\重构(GitHub)\\圣际宏原\\code\\sjhy\\WebApp\\wwwroot\\upload\\admins\\2022081088825.jpg",
+      "SourceId": "WebApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Project\\重构(GitHub)\\圣际宏原\\code\\sjhy\\WebApp\\wwwroot\\",
+      "BasePath": "_content/WebApp",
+      "RelativePath": "upload/admins/2022081088825.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\upload\\admins\\2022081088825.jpg"
     }
   ]
 }

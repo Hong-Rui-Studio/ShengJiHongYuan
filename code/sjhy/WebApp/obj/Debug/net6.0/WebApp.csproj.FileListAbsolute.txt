@@ -271,3 +271,7 @@ D:\Project\重构(GitHub)\圣际宏原\code\sjhy\WebApp\bin\Debug\net6.0\runtime
 D:\Project\重构(GitHub)\圣际宏原\code\sjhy\WebApp\bin\Debug\net6.0\WebApp.staticwebassets.runtime.json
 D:\Project\重构(GitHub)\圣际宏原\code\sjhy\WebApp\obj\Debug\net6.0\WebApp.RazorAssemblyInfo.cache
 D:\Project\重构(GitHub)\圣际宏原\code\sjhy\WebApp\obj\Debug\net6.0\WebApp.RazorAssemblyInfo.cs
+D:\Project\重构(GitHub)\圣际宏原\code\sjhy\WebApp\bin\Debug\net6.0\JetBrains.Annotations.dll
+D:\Project\重构(GitHub)\圣际宏原\code\sjhy\WebApp\bin\Debug\net6.0\X.PagedList.dll
+D:\Project\重构(GitHub)\圣际宏原\code\sjhy\WebApp\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll
+D:\Project\重构(GitHub)\圣际宏原\code\sjhy\WebApp\obj\Debug\net6.0\WebApp.MvcApplicationPartsAssemblyInfo.cs
